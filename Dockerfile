@@ -29,7 +29,7 @@ RUN git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
 # Create a Conda environment and activate it
 WORKDIR /workspace/gaussian-splatting
 
-RUN conda env create --file environment.yml && conda init bash && exec bash && conda activate gaussian_splatting
+# RUN conda env create --file environment.yml && conda init bash && exec bash && conda activate gaussian_splatting
 
 # Tweak the CMake file for matching the existing OpenCV version. Fix the naming of FindEmbree.cmake
 WORKDIR /workspace/gaussian-splatting/SIBR_viewers/cmake/linux
